@@ -18,22 +18,27 @@
   hideElements();
 
 
-
-
-function onAnimationsEnd() {
-   
+  function onAnimationsEnd() {
     document.getElementById('animate').removeEventListener('animationend', onAnimationsEnd);
 
     setTimeout(function() {
-        document.body.style.backgroundImage = 'url(../img/pader01.jpg)';
-        document.body.style.backgroundSize = 'cover'; 
+        const animateElement = document.getElementById('animate');
+        animateElement.classList.add('fundo-background-final');
 
-        const texto = document.createElement('p');
-        texto.textContent = ''; 
+        const h1 = document.createElement('h1');
+        h1.textContent = 'SPIDER-MAN';
+        h1.classList.add('titulo-h1'); 
 
-       
-        document.body.appendChild(texto);
+        const p = document.createElement('p');
+        p.textContent = 'Estreia nos Cinemas 23-10-2023';
+        p.classList.add('paragrafo-p'); 
+
+      
+        animateElement.appendChild(h1);
+        animateElement.appendChild(p);
     }, 5000);
 }
 
 document.getElementById('animate').addEventListener('animationend', onAnimationsEnd);
+
+
