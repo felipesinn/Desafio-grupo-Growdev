@@ -14,7 +14,7 @@
   }
 
 
-  // Chama a função para iniciar a contagem regressiva
+  // função para iniciar a contagem regressiva para aparecer o background
   hideElements();
 
 
